@@ -13,12 +13,31 @@ import { PiBowlFood } from "react-icons/pi";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { TbFridge } from "react-icons/tb";
 
+import single_img1 from '../../assets/single-img1.jpg'
+import familyduo_img1 from "../../assets/familyduo-img1.jpg"
+import rgallery_1 from "../../assets/rgallery-1.jpg"
+import rgallery_6 from "../../assets/rgallery-6.jpg"
+
+import { useForm } from 'react-hook-form'
 
 const Single_cabin  = () => {
+    const form = useForm({ 
+        defaultValues:{ 
+            name:"",
+            nights:""
+        }
+    })
+
+    const { register, handleSubmit, formState } = form
+    const { errors } = formState
+
+    const onSubmit = (data) => { 
+        console.log('Form submitted', data)
+    }
     return(
         <div className="text-black font-sans w-full">
-            <div className="flex flex-col h-[75vh] md:h-screen bg-purple-500 justify-end">
-                <div className="flex  xl:px-5 mb-20">
+            <div className="flex flex-col h-[75vh] md:h-screen single-header justify-end">
+                <div className="flex xl:px-5 mb-20">
                     <div className="text-white px-6 md:w-[85%] lg:w-[60%]">
                         <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8  ">Single Cabin</h1>
                         <p className="text-base sm:text-lg">Total relaxation is a way of life at Mountain Dreamers Lodge. Every suite and guest room includes natural wood accents, complimented by crisp linens, warm lighting, and stunning views.</p>
@@ -97,7 +116,7 @@ const Single_cabin  = () => {
                     </div>
                 </div>
                 
-                <div className="w-[36%] mx-6 h-full mt-28 hidden lg:flex">
+                <div className="w-[36%] mx-6 h-full mt-28 hidden lg:flex ">
                     <div className="py-10 px-9 border box-shadow rounded-3xl">
                         <div>
                             <h1 className="font-bold text-xl md:text-2xl">Reservate room</h1>
@@ -116,20 +135,33 @@ const Single_cabin  = () => {
                         </div>
 
                         <div className="mt-9">
-                            <form action="">
+                            <form onSubmit={handleSubmit(onSubmit)} noValidate >
                                 <div className="grid sm:grid-cols-3 gap-5">
                                     <div className="sm:col-span-2 ">
-                                        <label htmlFor="location" className="text-base md:text-lg font-bold">Location</label>
-                                        <input type="text" placeholder="Type in location" name="location" className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <label htmlFor="name" className="text-base md:text-lg font-bold">Name</label>
+                                        <input type="text" placeholder="Type in Name" id="name" { ...register('name', { 
+                                            required:{ 
+                                                value:true,
+                                                message:'Name is required',
+                                            },
+                                        }) } className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <p className="text-base md:text-lg text-red-700 mt-3">{ errors.name?.message }</p>
                                     </div>
 
                                     <div>
                                         <label htmlFor="nights" className="text-base md:text-lg font-bold">Nights</label>
-                                        <input type="text" placeholder="1" name="nights" className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <input type="text" placeholder="0" id="nights" { ...register('nights', { 
+                                            required:{ 
+                                                value:true,
+                                                message:'Required'
+                                            }
+                                        }) } className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <p className="text-base md:text-lg text-red-700 mt-3 pl-1">{ errors.nights?.message }</p>
+
                                     </div>
                                 </div>
 
-                                <div className="text-base md:text-lg w-full text-center py-5 mt-5 border shadow-lg font-medium rounded-full hover:bg-[#ff3f3f] hover:text-white">Add to Cart</div>
+                                <button  className="cursor-pointer text-base md:text-lg w-full text-center py-5 mt-5 border shadow-lg font-medium rounded-full hover:bg-[#ff3f3f] hover:text-white">Reserve Now</button> 
 
                                 <div className="flex my-7 space-x-6">
                                     <div className="border-t my-4 w-[45%]"></div>
@@ -137,7 +169,7 @@ const Single_cabin  = () => {
                                     <div className="border-t my-4 w-[45%]"></div>
                                 </div>
 
-                                <div className="text-base md:text-lg w-full text-center py-5 mt-5 border font-medium rounded-full bg-black hover:bg-[#ff3f3f] text-white">Book Now</div>
+                                <div className="cursor-pointer text-base md:text-lg w-full text-center py-5 mt-5 border font-medium rounded-full bg-black hover:bg-[#ff3f3f] text-white" >Book on Airbnb</div>
 
                             </form>
                         </div>                    
@@ -163,20 +195,32 @@ const Single_cabin  = () => {
                         </div>
 
                         <div className="mt-9">
-                            <form action="">
+                            <form onSubmit={handleSubmit(onSubmit)} noValidate>
                                 <div className="grid sm:grid-cols-3 gap-5">
                                     <div className="sm:col-span-2 ">
-                                        <label htmlFor="location" className="text-base md:text-lg font-bold">Location</label>
-                                        <input type="text" placeholder="Type in location" name="location" className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <label htmlFor="name" className="text-base md:text-lg font-bold">Name</label>
+                                        <input type="text" placeholder="Type in name" id="name" { ...register('name', { 
+                                            required:{ 
+                                                value:true,
+                                                message:'Name is required'
+                                            }
+                                        }) } className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <p className="text-base md:text-lg text-red-700 mt-3">{ errors.name?.message }</p>
                                     </div>
 
                                     <div>
                                         <label htmlFor="nights" className="text-base md:text-lg font-bold">Nights</label>
-                                        <input type="text" placeholder="1" name="nights" className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <input type="text" placeholder="0" id="nights" { ...register('nights', { 
+                                            required:{ 
+                                                value:true,
+                                                message:'Required'
+                                            }
+                                        }) } className="pl-6 rounded-full py-5 mt-4 w-full" />
+                                        <p className="text-base md:text-lg text-red-700 mt-3">{ errors.nights?.message }</p>
                                     </div>
                                 </div>
 
-                                <div className="text-base md:text-lg w-full text-center py-5 mt-5 border shadow-lg font-medium rounded-full hover:bg-[#ff3f3f] hover:text-white">Add to Cart</div>
+                                <button className="cursor-pointer text-base md:text-lg w-full text-center py-5 mt-5 border shadow-lg font-medium rounded-full hover:bg-[#ff3f3f] hover:text-white">Reserve Now</button> 
 
                                 <div className="flex my-7 space-x-6">
                                     <div className="border-t my-4 w-[45%]"></div>
@@ -184,7 +228,7 @@ const Single_cabin  = () => {
                                     <div className="border-t my-4 w-[45%]"></div>
                                 </div>
 
-                                <div className="text-base md:text-lg w-full text-center py-5 mt-5 border font-medium rounded-full bg-black hover:bg-[#ff3f3f] text-white">Book Now</div>
+                                <div className="cursor-pointer text-base md:text-lg w-full text-center py-5 mt-5 border font-medium rounded-full bg-black hover:bg-[#ff3f3f] text-white">Book on Airbnb</div>
 
                             </form>
                         </div>                    
@@ -195,18 +239,18 @@ const Single_cabin  = () => {
             <div className="px-6 py-[12%] bg-[#fcfcfc]">
                 <div className="max-w-screen-xl mx-auto xl:px-5">
                     <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">Room gallery</h1>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 mt-10 gap-x-7 gap-y-7">
-                        <div className="h-[270px] sm:h-[300px] md:h-[400px] lg:h-[240px] ">
-                            <img src={ image } alt="img" className="image rounded-3xl"/>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-x-7 gap-y-7">
+                        <div className="h-[270px] sm:h-[300px] lg:h-[240px] ">
+                            <img src={ single_img1 } alt="img" className="h-full w-full rounded-3xl object-cover"/>
                         </div>
-                        <div className="h-[270px] sm:h-[300px] md:h-[400px] lg:h-[240px] ">
-                            <img src={ image } alt="img" className="image rounded-3xl"/>
+                        <div className="h-[270px] sm:h-[300px] lg:h-[240px]">
+                            <img src={ rgallery_1 } alt="img" className="h-full w-full rounded-3xl object-cover"/>
                         </div>
-                        <div className="h-[270px] sm:h-[300px] md:h-[400px] lg:h-[240px] ">
-                            <img src={ image } alt="img" className="image rounded-3xl"/>
+                        <div className="h-[270px] sm:h-[300px] lg:h-[240px] ">
+                            <img src={ familyduo_img1 } alt="img" className="h-full w-full rounded-3xl object-cover"/>
                         </div>
-                        <div className="h-[270px] sm:h-[300px] md:h-[400px] lg:h-[240px] ">
-                            <img src={ image } alt="img" className="image rounded-3xl"/>
+                        <div className="h-[270px] sm:h-[300px] lg:h-[240px] ">
+                            <img src={ rgallery_6 } alt="img" className="h-full w-full rounded-3xl object-cover"/>
                         </div>
                     </div>
                 </div>

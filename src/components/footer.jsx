@@ -4,6 +4,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.jpg'
+
 
 const Footer = () => { 
     return(
@@ -11,7 +13,12 @@ const Footer = () => {
             <div className="max-w-screen-xl mx-auto px-6 text-[#5d5d5d] font-sans pt-28">
                 <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 lg:gap-x-11 pb-10">
                     <div className="w-full">
-                        <Link to="/"><h1>1<span className="font-bold text-xl sm:text-2xl cursor-pointer text-black">MDL</span></h1></Link>
+                        <Link to='/'>
+                            <div className='items-center flex space-x-2'>
+                                <img src={ logo } alt="logo" className='w-9 h-9 ' />
+                                <div className="font-bold text-xl sm:text-2xl text-black cursor-pointer hover:text-[#ff3f3f]">MDL</div>
+                            </div>
+                        </Link>
                         <h2 className="text-base md:text-lg mt-4 mb-4 sm:mb-6 font-[500]">Don't forget to check out our social media handles.</h2>
                         <div className="flex space-x-5">
                             <div className="rounded-full box-shadow p-2 cursor-pointer text-[#ff3f3f] hover:text-white hover:bg-[#ff3f3f]"><FaFacebookF size={17} className=""/></div>
@@ -25,10 +32,10 @@ const Footer = () => {
                         <div className="hidden sm:block">
                             <h1 className="font-bold text-lg sm:text-xl text-black">Pages</h1>
                             <ul className="text-base md:text-lg mt-4 cursor-pointer font-[500]">
-                                <Link to="/"><li className="py-1">Home</li></Link>
-                                <Link to="/about"><li  className="py-2">About</li></Link>
-                                <Link to="/contact"><li  className="py-2">Contact</li></Link>                                
-                                <Link to="/gallery"><li  className="py-2">Gallery</li></Link>
+                                <Link to="/"><li className="py-1 hover:text-[#ff3f3f]">Home</li></Link>
+                                <Link to="/about"><li  className="py-2 hover:text-[#ff3f3f]">About</li></Link>
+                                <Link to="/contact"><li  className="py-2 hover:text-[#ff3f3f]">Contact</li></Link>                                
+                                <Link to="/gallery"><li  className="py-2 hover:text-[#ff3f3f]">Gallery</li></Link>
                             </ul>
                         </div>
 

@@ -14,9 +14,11 @@ import Micro_cabin from './components/Booking pages/Micro cabin'
 import Familyduo_cabin from './components/Booking pages/Family Duo cabin'
 import Gallery from './components/gallery'
 
+
 function App() {
 
   return (
+    
     <Router>
       <div>
         <Navbar />

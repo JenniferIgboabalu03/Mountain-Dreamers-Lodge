@@ -1,11 +1,20 @@
 import React from "react";
 import image from "../assets/image.jpg"
-import { GrLocation } from "react-icons/gr";
+import difference_img1 from "../assets/difference-img1.jpg"
+import fishing from "../assets/fishing.jpg"
+import hiking from "../assets/hiking.jpg"
+import gaming from "../assets/gaming.jpg"
+import fun from '../assets/fun.png'
+import weather from '../assets/weather.png'
+import customer from '../assets/customer.png'
+import gaming_il from '../assets/gaming-il.png'
 
+
+import camp_fire from "../assets/camp-fire.jpg"
 export const About = () => {
     return(
         <div className="font-sans">        
-            <div className="flex flex-col justify-center text-center text-white bg-pink-600 w-full h-[85vh] sm:h-screen md:h-[1000px]">
+            <div className="flex flex-col justify-center text-center text-white about-header w-full h-[85vh] sm:h-screen md:h-[800px]">
                 <div className="max-w-screen-md mx-auto px-5">
                     <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8  ">About our resorts</h1>
                     <p className="text-base sm:text-lg">A resort that is decidedly, and purposefully, different. Understated, not loud. Gracious, not pretentious. Deferential, not presumptuous. In short, a sophisticated retreat where you can appreciate the enduring traditions of genuine hospitality.</p>
@@ -75,22 +84,28 @@ export const About = () => {
 
                 </div>
 
-                <div className="max-w-screen-xl mx-auto h-screen xl:px-5 mt-10">
-                    <div className="flex w-full space-x-6">
-                        <div className="w-[40%] lg:h-[100vh]">
-                            <img src={ image } alt="img" className="image rounded-3xl"/>
+                <div className="max-w-screen-xl mx-auto h-fit xl:px-5 mt-10">
+                    <div className="block md:hidden space-y-5 gap-5 columns-1 sm:columns-2">
+                        <img src={ hiking } alt="img" className="rounded-3xl h-80 w-full object-cover"/>
+                        <img src={ gaming } alt="img" className="rounded-3xl h-80 w-full object-cover"/>
+                        <img src={ camp_fire } alt="img" className="rounded-3xl h-80 w-full object-cover"/>
+                        <img src={ fishing } alt="img" className="rounded-3xl h-80 w-full object-cover"/>
+                    </div>
+                    <div className="hidden md:flex w-full space-x-6">
+                        <div className="w-[40%] ">
+                            <img src={ gaming } alt="img" className="rounded-3xl md:h-[80vh] lg:h-[100vh] w-full object-cover"/>
                         </div>
                         <div className="w-[60%] space-y-5">
                             <div className="flex w-full space-x-6">
-                                <div className="w-[50%] lg:h-[40vh]">
-                                    <img src={ image } alt="img" className="image rounded-3xl"/>
+                                <div className="w-[50%] ">
+                                    <img src={ hiking } alt="img" className="rounded-3xl md:h-[27vh] lg:h-[40vh] w-full object-cover"/>
                                 </div>
-                                <div className="w-[50%] lg:h-[40vh]">
-                                    <img src={ image } alt="img" className="image rounded-3xl"/>
+                                <div className="w-[50%] ">
+                                    <img src={ camp_fire } alt="img" className="rounded-3xl md:h-[27vh] lg:h-[40vh] w-full object-cover"/>
                                 </div>
                             </div>
-                            <div className="w-full lg:h-[57vh]">
-                                <img src={ image } alt="img" className="image rounded-3xl"/>      
+                            <div className="w-full">
+                                <img src={ fishing } alt="img" className="rounded-3xl md:h-[50vh] lg:h-[57vh] w-full object-cover"/>      
                             </div>
                                                                     
                         </div>
@@ -107,53 +122,42 @@ export const About = () => {
                     <p className="text-base sm:text-lg mt-4">These are the reasons why you should consider Mountain Dreamers Lodge <br /> during your next vacation.</p>
                 </div>
 
-                <div className="max-w-screen-xl mx-auto mt-10 gap-y-9 lg:gap-x-8 grid lg:grid-cols-2 xl:px-5">
-                    <div>
-                        <div className="sm:flex items-center">
-                            <div className="w-[150px] h-[150px] sm:w-[250px] sm:h-[200px] lg:w-[500px]">
-                                <img src={ image } alt="img" className="image rounded-3xl"/>
-                            </div>                            
-                            <div className="my-5 sm:my-12 sm:ml-8 w-full">
-                                <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Unique experience</h1>
-                                <p className="text-base sm:text-lg mt-2">Try out and experience our unique and fun activities filled with joy.</p>
-                            </div>
+                <div className="max-w-screen-xl mx-auto mt-10 gap-y-6 gap-x-6 grid lg:grid-cols-2 xl:px-5">                                           
+                    <div className="flex w-full gap-3 h-fit">
+                        <img src={ fun } alt="image" className="h-32 lg:h-36 xl:h-32 w-40 object-cover" />
+                        
+                        <div className="w-full h-full">
+                            <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Unique experience</h1>
+                            <p className="text-base sm:text-lg mt-2">Try out and experience our unique and fun activities filled with joy.</p>
                         </div>
                     </div>
-                    <div>
-                        <div className="sm:flex items-center">
-                            <div className="w-[150px] h-[150px] sm:w-[250px] sm:h-[200px] lg:w-[500px]">
-                                <img src={ image } alt="img" className="image rounded-3xl"/>
-                            </div>                            
-                            <div className="my-5 sm:my-12 sm:ml-8 w-full">
-                                <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Customer-first</h1>
-                                <p className="text-base sm:text-lg mt-2">Mountain Dreamers Lodge will always follow it's customer first rule because there is no us without you.</p>
-                            </div>
+                
+                    <div className="flex w-full gap-3 h-fit">
+                        <img src={ customer } alt="image" className="h-32 lg:h-36 xl:h-32 w-40 object-cover" />
+                        
+                        <div className="w-full h-full">
+                            <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Customer-first</h1>
+                            <p className="text-base sm:text-lg mt-2">Mountain Dreamers Lodge will always follow it's customer first rule because there is no us without you.</p>
                         </div>
                     </div>
-                    <div>
-                        <div className="sm:flex items-center">
-                            <div className="w-[150px] h-[150px] sm:w-[250px] sm:h-[200px] lg:w-[500px]">
-                                <img src={ image } alt="img" className="image rounded-3xl"/>
-                            </div>                            
-                            <div className="my-5 sm:my-12 sm:ml-8 w-full">
-                                <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Attractions galore</h1>
-                                <p className="text-base sm:text-lg mt-2">Besides hiking, deep sea fishing and gaming, you can pretty much find everything else to do in and around Mountain Dreamers Lodge.</p>
-                            </div>
+                
+                    <div className="flex w-full gap-3 h-fit">
+                        <img src={ gaming_il } alt="image" className="h-32 lg:h-36 xl:h-32 w-40 object-cover" />
+                        
+                        <div className="w-full h-full">
+                            <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Attractions galore</h1>
+                            <p className="text-base sm:text-lg mt-2">Besides hiking, deep sea fishing and gaming, you can pretty much find everything else to do in and around Mountain Dreamers Lodge.</p>
                         </div>
                     </div>
-                    
-                    <div>
-                        <div className="sm:flex items-center">
-                            <div className="w-[150px] h-[150px] sm:w-[250px] sm:h-[200px] lg:w-[500px]">
-                                <img src={ image } alt="img" className="image rounded-3xl"/>
-                            </div>                            
-                            <div className="my-5 sm:my-12 sm:ml-8 w-full">
-                                <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Wonderful weather</h1>
-                                <p className="text-base sm:text-lg mt-2">Whether you're looking to visit Mountain Dreamers Lodge during the Summer, over the Winter or anytime, rest assured that you'll experience a distinction in weather and the overall feel of the mountain.</p>
-                            </div>
+                
+                    <div className="flex w-full gap-3 h-fit">
+                        <img src={ weather } alt="image" className="h-32 lg:h-36 xl:h-32 w-40 object-cover" />
+                           
+                        <div className="w-full h-full">
+                            <h1 className="font-bold text-xl md:text-2xl text-black w-full" >Wonderful weather</h1>
+                            <p className="text-base sm:text-lg mt-2">Whether you're looking to visit Mountain Dreamers Lodge during the Summer, or anytime, rest assured that you'll experience a distinction in weather.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
             {/* Our difference section ends */}

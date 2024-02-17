@@ -6,45 +6,100 @@ body{
     background-color: white;   
 }
 
-.activity{
-    background-image: url("assets/image.jpg"); 
-    width: 100%;
+.home-header{
+    background-image: url("assets/home-header.jpg"); 
     background-size: cover;
     background-position: center;
-    position: relative;  
+    background-repeat: no-repeat;
 }
 
-.difference_img1{
-    background-image: url("assets/image.jpg"); 
+.about-header,.gallery-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url("assets/about-header.jpg"); 
     background-size: cover;
     background-position: center;
     position: relative; 
-   
 }
 
-.difference_img2{
-    background-image: url("assets/image.jpg"); 
+.contact-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/difference-img1.jpg"); 
+    background-size: cover;
+    background-position: center;       
+}
+
+.single-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/single-img1.jpg"); 
     background-size: cover;
     background-position: center;
-    position: relative;      
+    position: relative; 
 }
 
-.img-1{    
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: circle();    
+.micro-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/micro-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
 }
 
-.img{    
-    object-fit: cover;
-    height: 100px; 
-    width: 100px;    
+nav a.active{
+    color:#ff3f3f ;
+}
+.familyduo-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/rgallery-5.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
 }
 
-.image{    
-    width: 100%;
-    object-fit: cover;    
+.family-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/family-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.duplex-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/duplex-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.duo-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/duo-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.rooms-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/duplex-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.single-img1{
+    background-image:url("assets/single-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    height: 180px;
+}
+
+.duo-img1{
+    background-image:url("assets/duo-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    height: 180px;
+}
+
+.duplex-img1{
+    background-image:url("assets/duplex-img1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    height: 180px;
 }
 
 input{    
@@ -60,12 +115,5 @@ input{
 .faq{    
     
     box-shadow: 0 1px 1rem -10px #000;
-}
-
-.location-image{    
-    background-image: url(assets/image.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
 }
 

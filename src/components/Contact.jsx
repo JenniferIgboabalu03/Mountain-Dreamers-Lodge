@@ -5,7 +5,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import telephone from '../assets/telephone.png'
+import mail from '../assets/mail.png'
+import calendar from '../assets/calendar.png'
 
+import { useForm } from 'react-hook-form'
 
 const Contact = () =>{ 
     const [answer1,setShowAnswer1] = useState(false)
@@ -34,10 +38,26 @@ const Contact = () =>{
         setShowAnswer6(!answer6)
     }
     
+    const form = useForm({ 
+        defaultValues:{ 
+            name:'',
+            email:'',
+            phone:'',
+            subject:'',
+            message:'',
+        }
+    })
+
+    const { register, handleSubmit, formState } = form
+    const { errors } = formState
+
+    const onSubmit = (data) => { 
+        console.log('Form is submited', data)
+    }
 
     return(
         <div className="text-black font-sans">
-            <div className="max-w-full h-screen flex flex-col justify-center md:h-[1000px] bg-pink-700 ">
+            <div className="max-w-full h-screen flex flex-col justify-center md:h-[800px] contact-header ">
                 <div className="text-white max-w-screen-sm mx-auto px-5 text-center">
                     <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8  ">Contact us</h1>
                     <p className="text-base sm:text-lg">We are ready to serve you. If you have a request or comment, or if you would like additional information about Mountain Dreamers Lodge, the following is how to reach us.</p>
@@ -45,35 +65,69 @@ const Contact = () =>{
             </div>
 
             {/* Form section starts */}
-            <div className="w-full px-6 pb-[15%]">
+            <div className="w-full px-6 pt-[15%]">
                 <div className="max-w-screen-sm md:mx-auto mx-6 rounded-3xl px-8 lg:px-16 lg:pt-16 py-14 box-shadow">
-                    <form action="">
+                    <form onSubmit={handleSubmit(onSubmit)} noValidate>
                         <div className="grid sm:grid-cols-2 gap-x-5 md:gap-8 gap-y-5 w-full">
                             <div className="w-full">
-                                <label htmlFor="Full name" className="font-bold text-base sm:text-lg w-full">Full name</label>
-                                <input type="text" name="Full name" id="Full name" placeholder="Name" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <label htmlFor="name" className="font-bold text-base sm:text-lg w-full">Full name</label>
+                                <input type="text" { ...register('name',{ 
+                                    required:{ 
+                                        value:true,
+                                        message:'Name is required',
+                                    },
+                                } ) } id="name" placeholder="Name" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <p className="text-sm md:text-base text-red-700 mt-3">{ errors.name?.message }</p>
                             </div>
 
                             <div className="w-full">
-                                <label htmlFor="Email address" className="font-bold text-base sm:text-lg w-full">Email address</label>
-                                <input type="text" name="Email address" id="Email address" placeholder="example@gmail.com" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <label htmlFor="email" className="font-bold text-base sm:text-lg w-full">Email address</label>
+                                <input type="text" { ...register('email', { 
+                                    pattern:{ 
+                                        value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                                        message:'Invalid email format',
+                                    },
+                                    required:{ 
+                                        value: true,
+                                        message:'Email is required',
+                                    },
+                                }) } id="email" placeholder="example@gmail.com" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <p className="text-sm md:text-base text-red-700 mt-3">{ errors.email?.message }</p>
                             </div>
 
                             <div className="w-full">
-                                <label htmlFor="Phone" className="font-bold text-base sm:text-lg w-full">Phone</label>
-                                <input type="text" name="Phone" id="Phone" placeholder="(123) 456 - 789" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <label htmlFor="phone" className="font-bold text-base sm:text-lg w-full">Phone</label>
+                                <input type="text"  { ...register('phone',{ 
+                                    required:{ 
+                                        value:true,
+                                        message:'Number is required',
+                                    },
+                                } ) } id="phone" placeholder="(123) 456 - 789" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <p className="text-sm md:text-base text-red-700 mt-3">{ errors.phone?.message }</p>
                             </div>
 
                             <div className="w-full">
-                                <label htmlFor="Subject" className="font-bold text-base sm:text-lg w-full">Subject</label>
-                                <input type="text" name="Subject" id="Subject" placeholder="ex. Support" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <label htmlFor="subject" className="font-bold text-base sm:text-lg w-full">Subject</label>
+                                <input type="text"  { ...register('subject',{ 
+                                    required:{ 
+                                        value:true,
+                                        message:'Subject is required',
+                                    },
+                                } ) } id="subject" placeholder="ex. Support" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                <p className="text-sm md:text-base text-red-700 mt-3">{ errors.subject?.message }</p>
                             </div>  
 
                         </div>
 
                         <div className="w-full my-5 md:my-8 grid">
-                            <label htmlFor="Message" className="w-full font-bold text-base sm:text-lg">Message</label>
-                            <input type="text" name="Message" id="Message" placeholder="Please type your message here..." className="rounded-3xl my-3 pl-5 pt-5 pb-24 "/>
+                            <label htmlFor="message" className="w-full font-bold text-base sm:text-lg">Message</label>
+                            <input type="text"  { ...register('message',{ 
+                                    required:{ 
+                                        value:true,
+                                        message:'Message is required',
+                                    },
+                            } ) } id="message" placeholder="Please type your message here..." className="rounded-3xl my-3 pl-5 pt-5 pb-24 "/>
+                            <p className="text-base md:text-lg text-red-700 mt-3">{ errors.message?.message }</p>
                         </div>
 
                         <div className="grid sm:grid-cols-3 ">
@@ -88,27 +142,27 @@ const Contact = () =>{
                     </form>                    
                 </div>
 
-                <div className="max-w-screen-lg mx-auto  grid sm:grid-cols-2 lg:grid-cols-3 mt-20">
-                    <div className="text-center sm:text-normal sm:flex justify-center sm:justify-normal items-center cursor-pointer hover:text-[rgb(255,63,63)]">
-                        <h1 className="mt-5 sm:mt-0">9</h1>
+                <div className="max-w-screen-lg mx-auto  grid sm:grid-cols-2 lg:grid-cols-3 mt-20 space-y-2">
+                    <div className="text-center sm:text-normal sm:flex justify-center sm:justify-normal items-center cursor-pointer ">
+                        <img src={ mail } alt="image" className="w-16 h-16 mx-auto sm:mx-0" />
                         <div className="m-5 sm:m-7">
-                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold hover:text-[rgb(255,63,63)]">Have questions?</h2>
+                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold ">Have questions?</h2>
                             <p className="text-base sm:text-lg font-bold ">contact@mdl.com</p>
                         </div>
                     </div>
 
-                    <div className="text-center sm:flex justify-center sm:justify-normal items-center cursor-pointer hover:text-[rgb(255,63,63)]">
-                        <h1 className="mt-5 sm:mt-0">9</h1>
+                    <div className="text-center sm:flex justify-center sm:justify-normal items-center cursor-pointer ">
+                        <img src={ telephone } alt="image" className="w-16 h-16 mx-auto sm:mx-0" />
                         <div className="m-5 sm:m-7">
-                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold hover:text-[rgb(255,63,63)]">Give us a call</h2>
+                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold">Give us a call</h2>
                             <p className="text-base sm:text-lg font-bold ">(123)456 - 7890</p>
                         </div>
                     </div>
 
-                    <div className="text-center sm:flex justify-center sm:justify-normal items-center cursor-pointer hover:text-[rgb(255,63,63)]">
-                        <h1 className="mt-5 sm:mt-0">9</h1>
+                    <div className="text-center sm:flex justify-center sm:justify-normal items-center cursor-pointer ">
+                        <img src={ calendar } alt="image" className="w-16 h-16 mx-auto sm:mx-0" />
                         <div className="m-5 sm:m-7">
-                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold hover:text-[rgb(255,63,63)]">Make a reservation</h2>
+                            <h2 className="text-base sm:text-lg text-[#5d5d5d] font-semibold ">Make a reservation</h2>
                             <p className="text-base sm:text-lg font-bold ">reservation@mdl.com</p>
                         </div>
                     </div>
@@ -116,23 +170,6 @@ const Contact = () =>{
             </div>
             {/* Form section ends */}
 
-            {/* Location section starts */}
-            <div className="px-6 bg-[#fcfcfc] py-[20%] sm:py-[15%]">
-                <div className="md:flex md:flex-row max-w-screen-xl mx-auto xl:px-5 justify-between w-full items-center space-y-6 mb-10">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black md:w-[50%]">Our locations</h1>
-                    <p className="text-base sm:text-lg text-[#5d5d5d] sm:w-[75%] md:w-[50%]">Places where mountain dreamers lodge is currently located at.</p>
-                </div>
-
-                <div className="max-w-screen-xl mx-auto xl:px-5 w-full grid md:grid-cols-2 lg:grid-cols-3">
-                    <div className="location-image flex flex-col justify-end h-[60vh] md:h-[80vh]">
-                        <div className="ml-9 text-white">
-                            <p className="font-bold text-2xl">Revelstoke Mountain</p>
-                            <p className="text-base sm:text-lg mt-2"> British Columbia, Canada</p>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-            {/* Location section ends */}
             <div className="px-6 py-[15%]">
                 <div className="max-w-screen-sm w-full mx-auto text-center mb-10">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">Frequently Asked Questions</h1>
