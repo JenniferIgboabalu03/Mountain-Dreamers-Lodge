@@ -9,7 +9,7 @@ import logo from '../assets/logo.jpg'
 
 const Footer = () => { 
     return(
-        <div className="border-t">
+        <div className="border-t 2xl:max-w-screen-2xl 2xl:mx-auto">
             <div className="max-w-screen-xl mx-auto px-6 text-[#5d5d5d] font-sans pt-28">
                 <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 lg:gap-x-11 pb-10">
                     <div className="w-full">
@@ -49,7 +49,7 @@ const Footer = () => {
                             </div>
 
                             <div className="flex flex-row items-center w-full space-x-6 mt-6 sm:mt-8">
-                                <input className="p-5 flex w-full lg:w-[50%] rounded-full text-black border shadow-md" type="email" placeholder="Enter Email"></input>
+                                <input className="p-5 flex w-full lg:w-[50%] rounded-full text-black border shadow-md outline-none" type="email" placeholder="Enter Email"></input>
                                 <button className="py-4 px-7 md:py-5 md:px-9 bg-[#ff3f3f] font-bold rounded-full cursor-pointer text-base md:text-lg hover:bg-[#dc2b2b] text-white">Subscribe</button>
                             </div>
                         </div>

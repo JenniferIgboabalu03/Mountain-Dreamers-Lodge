@@ -24,15 +24,17 @@ export const Home = () => {
         slidesToScroll: 1
       };
     return(        
-        <div className="text-black font-sans">
-            <div className="w-full home-header flex flex-col justify-center h-screen md:h-[1000px] text-center ">
-                <div className="max-w-[900px] mx-auto px-5">
-                    <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl mb-8 text-white sm:mt-0 ">Welcom to Mountain <br /> Dreamers Lodge</h1>
-                    <p className="text-base sm:text-lg text-white">Treat yourself to the perfect staycation with special offers at Mountain Dreamers Lodge. Our mid-century getaway exudes a cozy, lakeside getaway. Enjoy earthy, mountain style decor, Come vibe with us.</p>
-                    <div className="mt-10 sm:flex justify-center space-y-3 sm:space-y-0 sm:space-x-6 items-center">
-                        <Link to="/rooms"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link>
-                        <Link to="/about"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white">About us</div></Link> 
-                    </div>
+        <div className="text-black font-sans 2xl:max-w-screen-2xl 2xl:mx-auto">
+            <div className="w-full home-header h-[400px] md:h-screen text-center ">
+                <div className="max-w-[900px] mx-auto px-5 h-full flex flex-col justify-center items-center">
+                    <div>
+                        <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl mb-8 text-white sm:mt-0 ">Welcom to Mountain <br /> Dreamers Lodge</h1>
+                        <p className="text-base sm:text-lg text-white">Treat yourself to the perfect staycation with special offers at Mountain Dreamers Lodge. Our mid-century getaway exudes a cozy, lakeside getaway. Enjoy earthy, mountain style decor, Come vibe with us.</p>
+                        <div className="mt-10 hidden md:flex justify-center space-y-3 sm:space-y-0 sm:space-x-6 items-center">
+                            <Link to="/rooms"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link>
+                            <Link to="/about"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white">About us</div></Link> 
+                        </div>
+                    </div>                    
                 </div>                
             </div>
             <div className="px-6 bg-[#fcfcfc]">

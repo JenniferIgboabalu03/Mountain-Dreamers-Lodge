@@ -56,8 +56,8 @@ const Contact = () =>{
     }
 
     return(
-        <div className="text-black font-sans">
-            <div className="max-w-full h-screen flex flex-col justify-center md:h-[800px] contact-header ">
+        <div className="text-black font-sans 2xl:max-w-screen-2xl 2xl:mx-auto">
+            <div className="max-w-full flex flex-col justify-center h-[400px] md:h-screen contact-header ">
                 <div className="text-white max-w-screen-sm mx-auto px-5 text-center">
                     <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8  ">Contact us</h1>
                     <p className="text-base sm:text-lg">We are ready to serve you. If you have a request or comment, or if you would like additional information about Mountain Dreamers Lodge, the following is how to reach us.</p>
@@ -76,7 +76,7 @@ const Contact = () =>{
                                         value:true,
                                         message:'Name is required',
                                     },
-                                } ) } id="name" placeholder="Name" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                } ) } id="name" placeholder="Name" className="w-full outline-none pl-5 rounded-full py-5 mt-3" />    
                                 <p className="text-sm md:text-base text-red-700 mt-3">{ errors.name?.message }</p>
                             </div>
 
@@ -91,7 +91,7 @@ const Contact = () =>{
                                         value: true,
                                         message:'Email is required',
                                     },
-                                }) } id="email" placeholder="example@gmail.com" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                }) } id="email" placeholder="example@gmail.com" className="w-full outline-none pl-5 rounded-full py-5 mt-3" />    
                                 <p className="text-sm md:text-base text-red-700 mt-3">{ errors.email?.message }</p>
                             </div>
 
@@ -102,7 +102,7 @@ const Contact = () =>{
                                         value:true,
                                         message:'Number is required',
                                     },
-                                } ) } id="phone" placeholder="(123) 456 - 789" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                } ) } id="phone" placeholder="(123) 456 - 789" className="w-full outline-none pl-5 rounded-full py-5 mt-3" />    
                                 <p className="text-sm md:text-base text-red-700 mt-3">{ errors.phone?.message }</p>
                             </div>
 
@@ -113,7 +113,7 @@ const Contact = () =>{
                                         value:true,
                                         message:'Subject is required',
                                     },
-                                } ) } id="subject" placeholder="ex. Support" className="w-full pl-5 rounded-full py-5 mt-3" />    
+                                } ) } id="subject" placeholder="ex. Support" className="w-full outline-none pl-5 rounded-full py-5 mt-3" />    
                                 <p className="text-sm md:text-base text-red-700 mt-3">{ errors.subject?.message }</p>
                             </div>  
 
@@ -126,7 +126,7 @@ const Contact = () =>{
                                         value:true,
                                         message:'Message is required',
                                     },
-                            } ) } id="message" placeholder="Please type your message here..." className="rounded-3xl my-3 pl-5 pt-5 pb-24 "/>
+                            } ) } id="message" placeholder="Please type your message here..." className="outline-none rounded-3xl my-3 pl-5 pt-5 pb-24 "/>
                             <p className="text-base md:text-lg text-red-700 mt-3">{ errors.message?.message }</p>
                         </div>
 

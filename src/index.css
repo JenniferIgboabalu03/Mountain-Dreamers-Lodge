@@ -7,17 +7,24 @@ body{
 }
 
 .home-header{
-    background-image: url("assets/home-header.jpg"); 
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url("assets/home-header.jpg"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.about-header,.gallery-header{
+.about-header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1)), url("assets/about-header.jpg"); 
     background-size: cover;
     background-position: center;
     position: relative; 
+}
+
+.gallery-header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/gallery-header.jpg"); 
+    background-size: cover;
+    background-position: center;  
+    position: relative;     
 }
 
 .contact-header{

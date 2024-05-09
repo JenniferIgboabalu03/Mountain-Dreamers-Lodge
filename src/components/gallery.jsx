@@ -1,4 +1,3 @@
-import image from '../assets/image.jpg'
 import difference_img1 from '../assets/difference-img1.jpg'
 import camp_fire from '../assets/camp-fire.jpg'
 import fishing from '../assets/fishing.jpg'
@@ -11,8 +10,8 @@ import rgallery1 from '../assets/rgallery-1.jpg'
 
 const Gallery = () => {
     return(
-        <div className="text-black font-sans w-full">
-            <div className="flex flex-col h-screen md:h-[800px] gallery-header justify-center px-6">
+        <div className="text-black font-sans w-full 2xl:max-w-screen-2xl 2xl:mx-auto">
+            <div className="flex flex-col h-[400px] md:h-screen gallery-header justify-center px-6">
                 <div className="xl:px-5 max-w-screen-sm mx-auto text-center">                    
                     <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8 text-white">Photo Gallery</h1>
                     <p className="text-base sm:text-lg text-white">Picture your self here. Travel around our gallery for a preview of all that awaits you at Mountain Dreamers Lodge.</p>                    

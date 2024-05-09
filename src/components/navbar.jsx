@@ -12,8 +12,8 @@ export const Navbar = () => {
     }
 
      return (
-        <div className='shadow-md w-full fixed z-[999] top-0 md:top-8 left-0 text-black'>
-            <div className='flex bg-white py-4 px-5 lg:px-10 justify-between items-center'>
+        <div className='shadow-md w-full fixed z-[999] top-0 md:top-6 left-0 text-black'>
+            <div className='flex bg-white py-2 md:py-4 px-5 lg:px-10 justify-between items-center'>
                 <Link to='/'>
                     <div className='items-center flex space-x-2'>
                         <img src={ logo } alt="logo" className='w-9 h-9 ' />

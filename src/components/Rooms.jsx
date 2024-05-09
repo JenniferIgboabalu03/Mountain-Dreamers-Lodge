@@ -4,8 +4,8 @@ import rooms_data from '../constants/Rooms_data';
 const Rooms = () => {
     
     return(
-        <div className="text-black font-sans w-full">
-            <div className="flex flex-col h-[75vh] md:h-screen rooms-header justify-center px-6">
+        <div className="text-black font-sans w-full 2xl:max-w-screen-2xl 2xl:mx-auto">
+            <div className="flex flex-col h-[400px] md:h-screen rooms-header justify-center px-6">
                 <div className="xl:px-5 max-w-screen-sm mx-auto text-center">                    
                     <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-8 text-white">Rooms</h1>
                     <p className="text-base sm:text-lg text-white">Our guestrooms and suites are designed for total relaxation, featuring natural wood accents, cozy linens, and stunning views of the mountain and lake. </p>                    

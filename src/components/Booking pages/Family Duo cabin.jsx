@@ -1,4 +1,3 @@
-import image from "../../assets/image.jpg"
 import { RxPerson } from "react-icons/rx";
 import { LiaBedSolid } from "react-icons/lia";
 import { PiBathtub } from "react-icons/pi";
