@@ -31,8 +31,8 @@ export const Home = () => {
                         <h1 className="font-bold text-3xl sm:text-5xl md:text-7xl mb-8 text-white sm:mt-0 ">Welcom to Mountain <br /> Dreamers Lodge</h1>
                         <p className="text-base sm:text-lg text-white">Treat yourself to the perfect staycation with special offers at Mountain Dreamers Lodge. Our mid-century getaway exudes a cozy, lakeside getaway. Enjoy earthy, mountain style decor, Come vibe with us.</p>
                         <div className="mt-10 hidden md:flex justify-center space-y-3 sm:space-y-0 sm:space-x-6 items-center">
-                            <Link to="/rooms"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link>
-                            <Link to="/about"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white">About us</div></Link> 
+                            <Link to="/rooms" target="_top"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link>
+                            <Link to="/about" target="_top"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white">About us</div></Link> 
                         </div>
                     </div>                    
                 </div>                
@@ -42,7 +42,7 @@ export const Home = () => {
                 <div className="max-w-[1240px] w-full mx-auto pt-[15%]">
                     <div className="w-full md:flex space-y-7 md:space-y-0 md:justify-between items-center mb-10" >
                         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">Explore our cabins</h1>
-                        <Link to="/rooms"><div className="mt-5 md:mt-0 py-4 px-6 sm:py-4 sm:px-6 md:py-6 md:px-8 border-2 rounded-full shadow-xl cursor-pointer text-lg hover:bg-[#ff3f3f] hover:text-white text-center">Browse all</div></Link> 
+                        <Link to="/rooms" target="_top"><div className="mt-5 md:mt-0 py-4 px-6 sm:py-4 sm:px-6 md:py-6 md:px-8 border-2 rounded-full shadow-xl cursor-pointer text-lg hover:bg-[#ff3f3f] hover:text-white text-center">Browse all</div></Link> 
                     </div>
                     <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
                         <div className="w-full shadow-xl rounded-3xl transition-all  hover:scale-90 cursor-pointer">
@@ -59,7 +59,7 @@ export const Home = () => {
                                         <p className="font-bold text-xl md:text-3xl">$99</p>
                                         <p className="text-sm md:text-base  text-[#8b8b8b]">/night</p>
                                     </div>                                        
-                                    <Link to="/single_cabin" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
+                                    <Link to="/single_cabin" target="_top" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ export const Home = () => {
                                         <p className="font-bold text-xl md:text-3xl">$129</p>
                                         <p className="text-sm md:text-base  text-[#8b8b8b]">/night</p>
                                     </div>                                        
-                                    <Link to="/duo_cabin" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
+                                    <Link to="/duo_cabin" target="_top" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ export const Home = () => {
                                         <p className="font-bold text-xl md:text-3xl">$150</p>
                                         <p className="text-sm md:text-base  text-[#8b8b8b]">/night</p>
                                     </div>                                        
-                                    <Link to="/duplex_cabin" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
+                                    <Link to="/duplex_cabin" target="_top" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">View Details</div></Link>
                                 </div>
                             </div>
                         </div>                        
@@ -175,8 +175,8 @@ export const Home = () => {
                     </div>
 
                     <div className="max-w-screen-lg mx-auto text-center justify-center space-y-3 md:space-y-0 sm:space-x-6 items-center md:flex ">
-                        <Link to="/rooms"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link> 
-                        <Link to="/about"><div className="py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border">About us</div></Link>
+                        <Link to="/rooms" target="_top"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white hover:text-black">Explore rooms</div></Link> 
+                        <Link to="/about" target="_top"><div className="py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border">About us</div></Link>
                     </div>
 
                 </div>          
@@ -203,7 +203,7 @@ export const Home = () => {
                             <p className="pb-5 text-base sm:text-lg mt-2">What sets us apart is our private access to the mountain, providing a unique mountain experience. Whether you're unwinding in the hot tub or in the oasis pool, your stay with us is exceptional.</p>
                             <div className="border-b mt-2 border-[#d7d5d5]"></div>
                             <p className="py-5 text-base sm:text-lg ">Nestled among the trees at an elevation of 5,174 ft, Mountain Dreamers Lodge is less than two hours from the main city, but feels like a different world. Here, you'll find gaming, hiking, fishing, mountain biking, Mountain Dreamers Lodge and the ultimate in peace & harmony.</p>
-                            <Link to="/about"><div className="py-4 px-7 md:py-6 md:px-10 text-center mt-7 w-full md:max-w-fit text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border shadow-md">About us</div></Link> 
+                            <Link to="/about" target="_top"><div className="py-4 px-7 md:py-6 md:px-10 text-center mt-7 w-full md:max-w-fit text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border shadow-md">About us</div></Link> 
                         </div>
                     </div>
 
@@ -249,8 +249,8 @@ export const Home = () => {
                 </div>                  
 
                 <div className="max-w-screen-xl text-center mx-auto mt-14 sm:space-x-6 sm:flex justify-center space-y-3 sm:space-y-0 items-center">
-                    <Link to="/rooms"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white">Book now</div></Link> 
-                    <Link to="/rooms"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border">Explore cabins</div></Link>
+                    <Link to="/rooms" target="_top"><div className="py-4 px-7 md:py-6 md:px-9 bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base md:text-lg hover:bg-[#dc2b2b] text-white">Book now</div></Link> 
+                    <Link to="/rooms" target="_top"><div className="mt-3 sm:mt-0 py-4 px-7 md:py-6 md:px-10 text-black bg-white rounded-full cursor-pointer text-base md:text-lg hover:bg-[#ff3f3f] hover:text-white border">Explore cabins</div></Link>
                 </div>
             </div>    
             {/* Testimonies section ends */}

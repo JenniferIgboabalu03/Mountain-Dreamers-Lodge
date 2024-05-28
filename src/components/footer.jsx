@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="max-w-screen-xl mx-auto px-6 text-[#5d5d5d] font-sans pt-28">
                 <div className="max-w-screen-xl mx-auto grid lg:grid-cols-3 lg:gap-x-11 pb-10">
                     <div className="w-full">
-                        <Link to='/'>
+                        <Link to='/' target="_top">
                             <div className='items-center flex space-x-2'>
                                 <img src={ logo } alt="logo" className='w-9 h-9 ' />
                                 <div className="font-bold text-xl sm:text-2xl text-black cursor-pointer hover:text-[#ff3f3f]">MDL</div>
@@ -32,10 +32,10 @@ const Footer = () => {
                         <div className="hidden sm:block">
                             <h1 className="font-bold text-lg sm:text-xl text-black">Pages</h1>
                             <ul className="text-base md:text-lg mt-4 cursor-pointer font-[500]">
-                                <Link to="/"><li className="py-1 hover:text-[#ff3f3f]">Home</li></Link>
-                                <Link to="/about"><li  className="py-2 hover:text-[#ff3f3f]">About</li></Link>
-                                <Link to="/contact"><li  className="py-2 hover:text-[#ff3f3f]">Contact</li></Link>                                
-                                <Link to="/gallery"><li  className="py-2 hover:text-[#ff3f3f]">Gallery</li></Link>
+                                <Link to="/" target="_top"><li className="py-1 hover:text-[#ff3f3f]">Home</li></Link>
+                                <Link to="/about" target="_top"><li  className="py-2 hover:text-[#ff3f3f]">About</li></Link>
+                                <Link to="/contact" target="_top"><li  className="py-2 hover:text-[#ff3f3f]">Contact</li></Link>                                
+                                <Link to="/gallery" target="_top"><li  className="py-2 hover:text-[#ff3f3f]">Gallery</li></Link>
                             </ul>
                         </div>
 

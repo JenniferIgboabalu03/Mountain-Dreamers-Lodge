@@ -30,7 +30,7 @@ const Rooms = () => {
                                             <p className="font-bold text-xl md:text-3xl">${ data.price }</p>
                                             <p className="text-sm md:text-base  text-[#8b8b8b]">/{ data.per }</p>
                                         </div>                                        
-                                        <Link to={ data.link } className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">{ data.button }</div></Link>
+                                        <Link to={ data.link } target="_top" className="md:w-[50%]"><div className="mt-3 md:mt-0 py-4 px-5 w-full text-center text-white bg-[#ff3f3f] rounded-full cursor-pointer font-bold text-base hover:bg-[#dc2b2b]">{ data.button }</div></Link>
                                     </div>
                                 </div>
                             </div>
